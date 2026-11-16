@@ -1,0 +1,47 @@
+[
+  {
+    "id": "MW-018",
+    "asset_id": "P-210",
+    "title": "Inspection on Eastern Link",
+    "start": "2027-07-13T08:30:00",
+    "end": "2027-07-13T12:30:00",
+    "status": "Scheduled",
+    "team": "Team Delta"
+  },
+  {
+    "id": "MW-020",
+    "asset_id": "T-EAST",
+    "title": "Terminal control system upgrade",
+    "start": "2027-07-13T09:30:00",
+    "end": "2027-07-13T14:00:00",
+    "status": "Scheduled",
+    "team": "Team Echo"
+  },
+  {
+    "id": "MW-022",
+    "asset_id": "C-201",
+    "title": "Compression unit service",
+    "start": "2027-07-15T08:00:00",
+    "end": "2027-07-15T11:00:00",
+    "status": "Scheduled",
+    "team": "Team Bravo"
+  },
+  {
+    "id": "MW-024",
+    "asset_id": "M-320",
+    "title": "Meter calibration",
+    "start": "2027-07-13T09:00:00",
+    "end": "2027-07-13T12:00:00",
+    "status": "Scheduled",
+    "team": "Team Alpha"
+  },
+  {
+    "id": "MW-027",
+    "asset_id": "T-WEST",
+    "title": "Routine terminal inspection",
+    "start": "2027-07-20T09:00:00",
+    "end": "2027-07-20T11:00:00",
+    "status": "Scheduled",
+    "team": "Team Foxtrot"
+  }
+]

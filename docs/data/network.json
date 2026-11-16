@@ -1,0 +1,430 @@
+{
+  "name": "GasGraph synthetic network",
+  "scenario_label": "Fictional North-South system",
+  "classification": "SYNTHETIC — NO REAL INFRASTRUCTURE DATA",
+  "units": "demonstration units per hour (invented, not calibrated)",
+  "sources": [
+    "SRC-N",
+    "SRC-S"
+  ],
+  "assets": [
+    {
+      "id": "SRC-N",
+      "label": "North Sea Alpha",
+      "type": "source",
+      "x": 72,
+      "y": 115,
+      "capacity": 110,
+      "status": "Operational",
+      "description": "Fictional northern inlet",
+      "data_classification": "SYNTHETIC",
+      "entity_source": "demo/assets.json"
+    },
+    {
+      "id": "P-101",
+      "label": "North Trunk · P-101",
+      "type": "pipeline",
+      "x": 190,
+      "y": 115,
+      "capacity": 105,
+      "status": "Operational",
+      "description": "Primary inlet corridor",
+      "data_classification": "SYNTHETIC",
+      "entity_source": "demo/assets.json"
+    },
+    {
+      "id": "T-WEST",
+      "label": "Westhaven Terminal",
+      "type": "terminal",
+      "x": 325,
+      "y": 115,
+      "capacity": 105,
+      "status": "Operational",
+      "description": "Western processing and routing node",
+      "data_classification": "SYNTHETIC",
+      "entity_source": "demo/assets.json"
+    },
+    {
+      "id": "M-101",
+      "label": "Metering · M-101",
+      "type": "meter",
+      "x": 453,
+      "y": 115,
+      "capacity": 94,
+      "status": "Operational",
+      "description": "Inbound flow measurement",
+      "data_classification": "SYNTHETIC",
+      "entity_source": "demo/assets.json"
+    },
+    {
+      "id": "P-110",
+      "label": "Coastal Link · P-110",
+      "type": "pipeline",
+      "x": 560,
+      "y": 115,
+      "capacity": 90,
+      "status": "Operational",
+      "description": "Feed to central hub",
+      "data_classification": "SYNTHETIC",
+      "entity_source": "demo/assets.json"
+    },
+    {
+      "id": "J-CENT",
+      "label": "Central Exchange",
+      "type": "junction",
+      "x": 680,
+      "y": 185,
+      "capacity": 115,
+      "status": "Operational",
+      "description": "Multi-route distribution hub",
+      "data_classification": "SYNTHETIC",
+      "entity_source": "demo/assets.json"
+    },
+    {
+      "id": "C-201",
+      "label": "Compression · C-201",
+      "type": "compressor",
+      "x": 798,
+      "y": 110,
+      "capacity": 95,
+      "status": "Operational",
+      "description": "Pressure-support asset",
+      "data_classification": "SYNTHETIC",
+      "entity_source": "demo/assets.json"
+    },
+    {
+      "id": "P-210",
+      "label": "Eastern Link · P-210",
+      "type": "pipeline",
+      "x": 928,
+      "y": 110,
+      "capacity": 82,
+      "status": "Operational",
+      "description": "Eastern export corridor",
+      "data_classification": "SYNTHETIC",
+      "entity_source": "demo/assets.json"
+    },
+    {
+      "id": "T-EAST",
+      "label": "Eastport Terminal",
+      "type": "terminal",
+      "x": 1055,
+      "y": 190,
+      "capacity": 95,
+      "status": "Operational",
+      "description": "Eastern receiving terminal",
+      "data_classification": "SYNTHETIC",
+      "entity_source": "demo/assets.json"
+    },
+    {
+      "id": "M-210",
+      "label": "Metering · M-210",
+      "type": "meter",
+      "x": 1140,
+      "y": 280,
+      "capacity": 76,
+      "status": "Operational",
+      "description": "Eastern delivery meter",
+      "data_classification": "SYNTHETIC",
+      "entity_source": "demo/assets.json"
+    },
+    {
+      "id": "OFF-EAST",
+      "label": "East Grid",
+      "type": "offtake",
+      "x": 1155,
+      "y": 382,
+      "capacity": 72,
+      "status": "Operational",
+      "description": "Fictional industrial offtake",
+      "data_classification": "SYNTHETIC",
+      "entity_source": "demo/assets.json"
+    },
+    {
+      "id": "SRC-S",
+      "label": "Southern Delta",
+      "type": "source",
+      "x": 72,
+      "y": 410,
+      "capacity": 89,
+      "status": "Operational",
+      "description": "Fictional secondary inlet",
+      "data_classification": "SYNTHETIC",
+      "entity_source": "demo/assets.json"
+    },
+    {
+      "id": "P-301",
+      "label": "Southern Trunk · P-301",
+      "type": "pipeline",
+      "x": 190,
+      "y": 410,
+      "capacity": 87,
+      "status": "Operational",
+      "description": "Southern trunk pipeline",
+      "data_classification": "SYNTHETIC",
+      "entity_source": "demo/assets.json"
+    },
+    {
+      "id": "T-SOUTH",
+      "label": "Southbay Terminal",
+      "type": "terminal",
+      "x": 325,
+      "y": 410,
+      "capacity": 87,
+      "status": "Operational",
+      "description": "Southern distribution terminal",
+      "data_classification": "SYNTHETIC",
+      "entity_source": "demo/assets.json"
+    },
+    {
+      "id": "P-310",
+      "label": "South Link · P-310",
+      "type": "pipeline",
+      "x": 452,
+      "y": 410,
+      "capacity": 82,
+      "status": "Operational",
+      "description": "Feed to southern hub",
+      "data_classification": "SYNTHETIC",
+      "entity_source": "demo/assets.json"
+    },
+    {
+      "id": "J-SOUTH",
+      "label": "Southern Exchange",
+      "type": "junction",
+      "x": 570,
+      "y": 410,
+      "capacity": 105,
+      "status": "Operational",
+      "description": "Southern branching hub",
+      "data_classification": "SYNTHETIC",
+      "entity_source": "demo/assets.json"
+    },
+    {
+      "id": "P-320",
+      "label": "Lakeside Link · P-320",
+      "type": "pipeline",
+      "x": 700,
+      "y": 450,
+      "capacity": 63,
+      "status": "Operational",
+      "description": "Southwest distribution",
+      "data_classification": "SYNTHETIC",
+      "entity_source": "demo/assets.json"
+    },
+    {
+      "id": "M-320",
+      "label": "Metering · M-320",
+      "type": "meter",
+      "x": 824,
+      "y": 450,
+      "capacity": 65,
+      "status": "Review",
+      "description": "Synthetic calibration warning",
+      "data_classification": "SYNTHETIC",
+      "entity_source": "demo/assets.json"
+    },
+    {
+      "id": "OFF-SOUTH",
+      "label": "South Grid",
+      "type": "offtake",
+      "x": 950,
+      "y": 450,
+      "capacity": 61,
+      "status": "Operational",
+      "description": "Fictional southwest offtake",
+      "data_classification": "SYNTHETIC",
+      "entity_source": "demo/assets.json"
+    },
+    {
+      "id": "P-330",
+      "label": "Interconnector · P-330",
+      "type": "pipeline",
+      "x": 626,
+      "y": 305,
+      "capacity": 72,
+      "status": "Operational",
+      "description": "Southern-to-central crossfeed",
+      "data_classification": "SYNTHETIC",
+      "entity_source": "demo/assets.json"
+    },
+    {
+      "id": "P-220",
+      "label": "Storage Link · P-220",
+      "type": "pipeline",
+      "x": 815,
+      "y": 273,
+      "capacity": 70,
+      "status": "Operational",
+      "description": "Alternate eastern corridor",
+      "data_classification": "SYNTHETIC",
+      "entity_source": "demo/assets.json"
+    },
+    {
+      "id": "STOR-01",
+      "label": "Boreal Storage",
+      "type": "storage",
+      "x": 928,
+      "y": 285,
+      "capacity": 75,
+      "status": "Operational",
+      "description": "Synthetic storage and buffer",
+      "data_classification": "SYNTHETIC",
+      "entity_source": "demo/assets.json"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "E-01",
+      "source": "SRC-N",
+      "target": "P-101",
+      "type": "FLOWS_TO"
+    },
+    {
+      "id": "E-02",
+      "source": "P-101",
+      "target": "T-WEST",
+      "type": "FLOWS_TO"
+    },
+    {
+      "id": "E-03",
+      "source": "T-WEST",
+      "target": "M-101",
+      "type": "FLOWS_TO"
+    },
+    {
+      "id": "E-04",
+      "source": "M-101",
+      "target": "P-110",
+      "type": "FLOWS_TO"
+    },
+    {
+      "id": "E-05",
+      "source": "P-110",
+      "target": "J-CENT",
+      "type": "FLOWS_TO"
+    },
+    {
+      "id": "E-06",
+      "source": "J-CENT",
+      "target": "C-201",
+      "type": "FLOWS_TO"
+    },
+    {
+      "id": "E-07",
+      "source": "C-201",
+      "target": "P-210",
+      "type": "FLOWS_TO"
+    },
+    {
+      "id": "E-08",
+      "source": "P-210",
+      "target": "T-EAST",
+      "type": "FLOWS_TO"
+    },
+    {
+      "id": "E-09",
+      "source": "T-EAST",
+      "target": "M-210",
+      "type": "FLOWS_TO"
+    },
+    {
+      "id": "E-10",
+      "source": "M-210",
+      "target": "OFF-EAST",
+      "type": "FLOWS_TO"
+    },
+    {
+      "id": "E-11",
+      "source": "SRC-S",
+      "target": "P-301",
+      "type": "FLOWS_TO"
+    },
+    {
+      "id": "E-12",
+      "source": "P-301",
+      "target": "T-SOUTH",
+      "type": "FLOWS_TO"
+    },
+    {
+      "id": "E-13",
+      "source": "T-SOUTH",
+      "target": "P-310",
+      "type": "FLOWS_TO"
+    },
+    {
+      "id": "E-14",
+      "source": "P-310",
+      "target": "J-SOUTH",
+      "type": "FLOWS_TO"
+    },
+    {
+      "id": "E-15",
+      "source": "J-SOUTH",
+      "target": "P-320",
+      "type": "FLOWS_TO"
+    },
+    {
+      "id": "E-16",
+      "source": "P-320",
+      "target": "M-320",
+      "type": "FLOWS_TO"
+    },
+    {
+      "id": "E-17",
+      "source": "M-320",
+      "target": "OFF-SOUTH",
+      "type": "FLOWS_TO"
+    },
+    {
+      "id": "E-18",
+      "source": "J-SOUTH",
+      "target": "P-330",
+      "type": "FLOWS_TO"
+    },
+    {
+      "id": "E-19",
+      "source": "P-330",
+      "target": "J-CENT",
+      "type": "FLOWS_TO"
+    },
+    {
+      "id": "E-20",
+      "source": "J-CENT",
+      "target": "P-220",
+      "type": "FLOWS_TO"
+    },
+    {
+      "id": "E-21",
+      "source": "P-220",
+      "target": "STOR-01",
+      "type": "FLOWS_TO"
+    },
+    {
+      "id": "E-22",
+      "source": "STOR-01",
+      "target": "T-EAST",
+      "type": "FLOWS_TO"
+    }
+  ],
+  "ontology": {
+    "entity_types": [
+      "Source",
+      "Pipeline",
+      "Terminal",
+      "Junction",
+      "Compressor",
+      "Meter",
+      "Storage",
+      "Offtake"
+    ],
+    "relationship_types": [
+      "FLOWS_TO"
+    ],
+    "rules": [
+      "FLOWS_TO represents potential directed dependency, not confirmed physical flow.",
+      "A topology-based consequence analysis never establishes hydraulic feasibility.",
+      "Proposed work orders cannot operate equipment or affect real systems."
+    ]
+  }
+}

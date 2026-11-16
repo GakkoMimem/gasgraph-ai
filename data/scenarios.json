@@ -1,0 +1,34 @@
+[
+  {
+    "id": "west",
+    "name": "Westhaven maintenance",
+    "subtitle": "Dependency and scheduling impact",
+    "asset_id": "T-WEST",
+    "start": "2027-07-13T09:00",
+    "duration_hours": 4
+  },
+  {
+    "id": "compression",
+    "name": "Compressor intervention",
+    "subtitle": "Compare alternate eastward routes",
+    "asset_id": "C-201",
+    "start": "2027-07-13T09:00",
+    "duration_hours": 3
+  },
+  {
+    "id": "south",
+    "name": "South meter calibration",
+    "subtitle": "Identify direct maintenance conflict",
+    "asset_id": "M-320",
+    "start": "2027-07-13T09:30",
+    "duration_hours": 2
+  },
+  {
+    "id": "no_conflict",
+    "name": "Quiet-window planning",
+    "subtitle": "Compare low-conflict scheduling",
+    "asset_id": "P-101",
+    "start": "2027-07-17T10:00",
+    "duration_hours": 2
+  }
+]

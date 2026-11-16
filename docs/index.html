@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="description" content="GasGraph AI: an independent synthetic gas-network intelligence demonstration." />
+  <title>GasGraph AI — Network Intelligence Lab</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="./static-engine.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <svg class="svg-icons" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="ic-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+    <symbol id="ic-cpu" viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="3"/><rect x="9" y="9" width="6" height="6" rx="1"/><path d="M9 1v4M15 1v4M9 19v4M15 19v4M1 9h4M1 15h4M19 9h4M19 15h4"/></symbol>
+    <symbol id="ic-layers" viewBox="0 0 24 24"><path d="m12 2 9 5-9 5-9-5 9-5ZM3 12l9 5 9-5M3 17l9 5 9-5"/></symbol>
+    <symbol id="ic-activity" viewBox="0 0 24 24"><path d="M3 12h5l3-8 4 16 3-8h3"/></symbol>
+    <symbol id="ic-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-7-7 7 7-7 7"/></symbol>
+    <symbol id="ic-spark" viewBox="0 0 24 24"><path d="m12 2 2.2 7.8L22 12l-7.8 2.2L12 22l-2.2-7.8L2 12l7.8-2.2L12 2Z"/></symbol>
+    <symbol id="ic-check" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></symbol>
+    <symbol id="ic-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v6l4 2"/></symbol>
+    <symbol id="ic-lock" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></symbol>
+    <symbol id="ic-shield" viewBox="0 0 24 24"><path d="M12 2 21 6v6c0 5-3.3 8.7-9 10-5.7-1.3-9-5-9-10V6l9-4Z"/><path d="m8 12 3 3 5-6"/></symbol>
+    <symbol id="ic-code" viewBox="0 0 24 24"><path d="m8 5-6 7 6 7M16 5l6 7-6 7M14 3l-4 18"/></symbol>
+    <symbol id="ic-terminal" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="18" rx="3"/><path d="m6 8 4 4-4 4M13 16h5"/></symbol>
+    <symbol id="ic-download" viewBox="0 0 24 24"><path d="M12 3v13m-5-5 5 5 5-5M4 18v3h16v-3"/></symbol>
+    <symbol id="ic-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 11v6M12 7h.01"/></symbol>
+    <symbol id="ic-chevron" viewBox="0 0 24 24"><path d="m7 10 5 5 5-5"/></symbol>
+    <symbol id="ic-refresh" viewBox="0 0 24 24"><path d="M20 5v5h-5M4 19v-5h5M5.8 10a7 7 0 0 1 12-3L20 10M4 14l2.2 3a7 7 0 0 0 12-3"/></symbol>
+    <symbol id="ic-search" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="7"/><path d="m16 16 5 5"/></symbol>
+    <symbol id="ic-send" viewBox="0 0 24 24"><path d="m21 3-7 18-3.6-7.4L3 10 21 3ZM10.4 13.6 21 3"/></symbol>
+    <symbol id="ic-filter" viewBox="0 0 24 24"><path d="M3 4h18l-7 8v7l-4 2v-9L3 4Z"/></symbol>
+    <symbol id="ic-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7 .5l3-3a5 5 0 0 0-7-7l-1.7 1.7M14 11a5 5 0 0 0-7-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></symbol>
+  </svg>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="./" aria-label="GasGraph AI dashboard">
+        <div class="brand-mark"><span class="brand-atom a"></span><span class="brand-atom b"></span><span class="brand-atom c"></span><span class="brand-atom d"></span></div>
+        <div class="brand-word"><strong>gasgraph<span>.ai</span></strong><small>NETWORK INTELLIGENCE</small></div>
+      </a>
+      <div class="workspace-label">WORKSPACE <span>01 / DEMO</span></div>
+      <nav class="nav" aria-label="Main navigation">
+        <button class="nav-item active" data-route="overview"><svg><use href="#ic-grid"></use></svg><span>Overview</span><i class="nav-active"></i></button>
+        <button class="nav-item" data-route="agent"><svg><use href="#ic-spark"></use></svg><span>Agent studio</span><span class="nav-count">04</span></button>
+        <button class="nav-item" data-route="ontology"><svg><use href="#ic-layers"></use></svg><span>Ontology explorer</span></button>
+        <button class="nav-item" data-route="activity"><svg><use href="#ic-activity"></use></svg><span>Activity & audit</span></button>
+      </nav>
+      <div class="sidebar-divider"></div>
+      <div class="sidebar-group-title">QUICK SCENARIOS</div>
+      <div id="sidebarScenarios" class="sidebar-scenarios"></div>
+      <div class="sidebar-spacer"></div>
+      <div class="sidebar-note"><span class="tiny-pulse"></span><div><strong>Isolated demo</strong><span>100% synthetic data</span></div><svg><use href="#ic-shield"></use></svg></div>
+      <div class="sidebar-footer"><div class="avatar">GH</div><div><strong>Independent project</strong><small>Built as a technical portfolio demo</small></div></div>
+    </aside>
+
+    <div class="app-body">
+      <header class="topbar">
+        <div class="breadcrumb"><span>GasGraph AI</span><svg><use href="#ic-chevron"></use></svg><strong id="breadcrumb">Overview</strong></div>
+        <div class="top-controls">
+          <span class="top-status"><i></i>SYSTEM READY</span>
+          <span class="top-separator"></span>
+          <span class="demo-tag"><svg><use href="#ic-shield"></use></svg>SYNTHETIC ENVIRONMENT</span>
+          <button id="exportBtn" class="top-icon-btn" title="Export current analysis" aria-label="Export analysis"><svg><use href="#ic-download"></use></svg></button>
+        </div>
+      </header>
+      <main id="content">
+        <section class="view" id="view-overview">
+          <div class="hero">
+            <div class="hero-content"><div class="eyebrow"><span class="eyebrow-line"></span> INTELLIGENCE PLATFORM / LAB SERIES 001</div>
+              <h1>See the network.<br /><em>Understand the impact.</em></h1>
+              <p>A business-aware intelligence layer for complex infrastructure. Explore dependencies, evaluate maintenance scenarios and propose governed actions.</p>
+              <div class="hero-actions"><button id="heroRun" class="primary-btn"><svg><use href="#ic-spark"></use></svg>Run impact analysis<svg class="btn-arrow"><use href="#ic-arrow"></use></svg></button><button id="heroAgent" class="outline-btn">Explore agent tools <svg><use href="#ic-arrow"></use></svg></button></div>
+            </div>
+            <div class="hero-orbit" aria-hidden="true"><div class="orbit-ring r1"></div><div class="orbit-ring r2"></div><div class="orbit-ring r3"></div><div class="orb-core"><span></span></div><i class="orb-dot d1"></i><i class="orb-dot d2"></i><i class="orb-dot d3"></i><i class="orb-dot d4"></i><span class="orbit-label one">SEMANTIC LAYER</span><span class="orbit-label two">DEPENDENCY GRAPH</span></div>
+            <span class="hero-index">GGAI / 001</span>
+          </div>
+          <div class="metric-grid">
+            <div class="metric"><div class="metric-header">Mapped entities<svg><use href="#ic-grid"></use></svg></div><div class="metric-big" id="kpiAssets">—</div><div class="metric-footer"><span class="metric-tiny-dot mint"></span>Verified synthetic ontology</div></div>
+            <div class="metric"><div class="metric-header">Relationships<svg><use href="#ic-link"></use></svg></div><div class="metric-big" id="kpiRelations">—</div><div class="metric-footer"><span class="metric-tiny-dot blue"></span>Directed graph edges</div></div>
+            <div class="metric"><div class="metric-header">Scheduled work<svg><use href="#ic-clock"></use></svg></div><div class="metric-big" id="kpiJobs">—</div><div class="metric-footer"><span class="metric-tiny-dot orange"></span>Fictional maintenance windows</div></div>
+            <div class="metric"><div class="metric-header">Controlled actions<svg><use href="#ic-shield"></use></svg></div><div class="metric-big" id="kpiGoverned">0<span class="metric-suffix"> external</span></div><div class="metric-footer"><span class="metric-tiny-dot mint"></span>Human authorization required</div></div>
+          </div>
+          <div class="main-grid">
+            <section class="panel graph-panel"><div class="panel-head"><div><div class="panel-eyebrow">NETWORK CANVAS <span class="section-index">01</span></div><h2>System topology</h2><p>Explore assets, direction of flow and dependency paths.</p></div><div class="head-tools"><button class="small-pill active" id="graphViewBtn">Topology</button><button class="small-pill" id="graphResetBtn"><svg><use href="#ic-refresh"></use></svg> Reset</button></div></div>
+              <div class="graph-wrap" id="graphWrap"><div class="graph-vignette"></div><div class="graph-overline"><span class="graph-live"><i></i> INTERACTIVE NETWORK</span><span>FIG. 01 / SYNTHETIC</span></div>
+                <svg id="networkGraph" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1220 550" role="img" aria-label="Interactive fictional gas distribution network"></svg>
+                <div class="graph-bottom"><div class="graph-legend"><span><i class="legend-source"></i> Source</span><span><i class="legend-terminal"></i> Terminal</span><span><i class="legend-pipe"></i> Infrastructure</span><span><i class="legend-affected"></i> In focus</span></div><span class="graph-help">Select any node to inspect ↗</span></div>
+              </div>
+              <div class="graph-summary" id="graphSummary"><div><span class="panel-eyebrow">SELECTED OBJECT</span><strong id="nodeName">Choose a network entity</strong></div><div class="selected-info"><span id="nodeType">—</span><span id="nodeCapacity">—</span><span id="nodeStatus" class="ok">—</span></div><button class="icon-square" id="runSelected" title="Analyze selected asset"><svg><use href="#ic-arrow"></use></svg></button></div>
+              <div class="network-inspector"><div class="inspector-title"><span>ENTITY CONTEXT / SEMANTIC INSPECTION</span><span id="selectedClass">SYNTHETIC</span></div><div class="inspector-metrics"><div><span>UPSTREAM CONNECTIONS</span><strong id="nodeIncoming">—</strong></div><div><span>DOWNSTREAM CONNECTIONS</span><strong id="nodeOutgoing">—</strong></div><div><span>BUSINESS CLASS</span><strong id="nodeClass">—</strong></div></div><p id="nodeDescription">Select an asset to explore its semantic context.</p></div>
+            </section>
+            <section class="panel studio-panel"><div class="panel-head"><div><div class="panel-eyebrow">SIMULATION STUDIO <span class="section-index">02</span></div><h2>Impact assessment</h2><p>Test a hypothetical maintenance event.</p></div><div class="live-chip"><span></span> SIMULATION</div></div>
+              <div class="studio-inner">
+                <label class="field-label" for="scenarioSelect">QUICK SCENARIO</label><div class="field-frame select-frame"><select id="scenarioSelect" aria-label="Choose scenario"></select><svg><use href="#ic-chevron"></use></svg></div>
+                <label class="field-label field-gap" for="assetSelect">TARGET ASSET</label><div class="field-frame select-frame"><select id="assetSelect" aria-label="Target asset"></select><svg><use href="#ic-chevron"></use></svg></div>
+                <div class="field-columns"><div><label class="field-label field-gap" for="startInput">START TIME</label><input id="startInput" type="datetime-local" value="2027-07-13T09:00" /></div><div><label class="field-label field-gap" for="durationSelect">DURATION</label><select id="durationSelect"><option value="1">1 hour</option><option value="2">2 hours</option><option value="3">3 hours</option><option value="4" selected>4 hours</option><option value="6">6 hours</option><option value="8">8 hours</option><option value="12">12 hours</option></select></div></div>
+                <div class="inset-note"><svg><use href="#ic-info"></use></svg><span>This analysis uses only invented network structures and maintenance schedules. It does not simulate physical gas dynamics.</span></div>
+                <button id="analyzeBtn" class="primary-btn primary-full"><svg><use href="#ic-spark"></use></svg>Analyze scenario <svg class="btn-arrow"><use href="#ic-arrow"></use></svg></button>
+                <div class="studio-split"></div><div class="result-label"><span>LAST ANALYSIS</span><span id="resultRunId">—</span></div>
+                <div class="risk-head"><div><span class="muted-kicker">Illustrative scenario index</span><div class="risk-value"><strong id="riskScore">—</strong><span id="riskLabel" class="risk-tag">No analysis</span></div></div><div class="risk-gauge"><svg viewBox="0 0 95 56" width="104" height="64"><path d="M9 51A38 38 0 0 1 85 51" fill="none" stroke="#273344" stroke-width="9" stroke-linecap="round"/><path id="gaugeArc" d="M9 51A38 38 0 0 1 85 51" fill="none" stroke="#75e0c1" stroke-width="9" stroke-linecap="round" stroke-dasharray="120 120" stroke-dashoffset="120"/></svg></div></div>
+                <div class="result-stat-grid"><div class="mini-result"><span>Potential links</span><strong id="affectedCount">—</strong></div><div class="mini-result"><span>Review items</span><strong id="conflictCount">—</strong></div><div class="mini-result"><span>Alternate paths</span><strong id="alternateCount">—</strong></div></div>
+                <button id="viewFindingsBtn" class="text-action">Explore detailed findings <svg><use href="#ic-arrow"></use></svg></button>
+              </div>
+            </section>
+          </div>
+          <div class="lower-grid">
+            <section class="panel findings-panel"><div class="panel-head"><div><div class="panel-eyebrow">EXPLAINABILITY <span class="section-index">03</span></div><h2>Analysis breakdown</h2><p>Reasoning is traceable to relationships and scheduled work.</p></div><span class="quiet-label">EVIDENCE-FIRST</span></div><div id="findingsContent" class="findings-content"><div class="empty-state">Run an analysis to inspect its evidence paths and scheduling findings.</div></div></section>
+            <section class="panel governance-panel"><div class="panel-head"><div><div class="panel-eyebrow">GOVERNANCE LAYER <span class="section-index">04</span></div><h2>Human-in-the-loop</h2><p>Review before any action is recorded.</p></div><svg class="governance-icon"><use href="#ic-lock"></use></svg></div><div class="governance-inner"><div class="governance-banner"><svg><use href="#ic-shield"></use></svg><div><strong>Safe by design</strong><span>No field-control integration. No external side effects.</span></div></div><div id="orderContent" class="order-content"><div class="empty-state">Your generated work-order draft appears here after analysis.</div></div></div></section>
+          </div>
+          <div class="bottom-note"><svg><use href="#ic-shield"></use></svg> Built as an independent educational proof-of-concept · All asset names, flows, capacities and schedules are fictional. <span>NOT AN OPERATIONAL TOOL</span></div>
+        </section>
+
+        <section class="view hidden" id="view-agent">
+          <div class="page-intro"><div class="eyebrow"><span class="eyebrow-line"></span> INTELLIGENCE PLATFORM / AGENT STUDIO</div><h1>Ask about <em>the network.</em></h1><p>Use an auditable tool router to translate a question into graph analysis, schedule inspection and a draft action. Unrecognized requests are rejected rather than guessed.</p></div>
+          <div class="agent-layout"><section class="panel agent-chat-panel"><div class="panel-head"><div><div class="panel-eyebrow" id="agentModeTitle">DETERMINISTIC AGENT</div><h2>Agent workspace</h2><p id="agentModeDescription">Real tool execution · No remote model calls</p></div><span class="live-chip"><span></span><span id="agentModeBadge">RULE ROUTER</span></span></div>
+              <div id="messages" class="messages"><div class="chat-message assistant"><div class="chat-avatar"><svg><use href="#ic-spark"></use></svg></div><div class="chat-bubble"><strong>Network intelligence assistant</strong><p>I'm connected to 22 fictional assets. Ask me to assess maintenance for a named terminal, pipeline or compressor. I will run explicit tools and provide auditable results.</p></div></div></div>
+              <form id="askForm" class="chat-composer"><input id="questionInput" maxlength="600" placeholder="e.g. Plan maintenance at Westhaven Terminal…" aria-label="Ask about network" required /><button class="primary-btn" type="submit" title="Send question"><svg><use href="#ic-send"></use></svg></button></form>
+              <div class="prompt-suggestions"><button class="suggestion" data-prompt="Assess Westhaven Terminal maintenance and affected downstream assets">Westhaven dependencies</button><button class="suggestion" data-prompt="Check conflicts for compressor C-201">Compressor conflicts</button><button class="suggestion" data-prompt="Plan maintenance on meter M-320">Meter calibration</button></div>
+            </section><section class="panel tool-panel"><div class="panel-head"><div><div class="panel-eyebrow">TOOL EXECUTION</div><h2>Inspectable reasoning</h2><p>Actual executed steps from the backend.</p></div></div><div id="agentTrace" class="agent-trace"><div class="empty-state">Ask the agent a question to view its tool trace.</div></div><div class="tool-footer"><svg><use href="#ic-code"></use></svg><span>MCP-compatible tools also available via the optional Python MCP server.</span></div></section></div>
+        </section>
+
+        <section class="view hidden" id="view-ontology">
+          <div class="page-intro"><div class="eyebrow"><span class="eyebrow-line"></span> KNOWLEDGE MODEL / SEMANTIC LAYER</div><h1>Data with <em>meaning.</em></h1><p>Every asset has a type, identifier and properties; every connection has an explicit relationship. Agents can reason over this model rather than unstructured text alone.</p></div>
+          <div class="ontology-layout"><section class="panel ontology-panel"><div class="panel-head"><div><div class="panel-eyebrow">ENTITY CATALOG</div><h2>Ontology explorer</h2><p>Filter and inspect the schema and its instances.</p></div><span class="quiet-label">22 ENTITIES</span></div><div class="catalog-tools"><div class="search-field"><svg><use href="#ic-search"></use></svg><input id="catalogSearch" placeholder="Search IDs, assets or types" aria-label="Search entities" /></div><select id="typeFilter"><option value="all">All entity types</option></select></div><div id="catalogRows" class="catalog-rows"></div></section><section class="panel ontology-detail"><div class="panel-head"><div><div class="panel-eyebrow">SCHEMA & RULES</div><h2>Grounding model</h2></div><svg class="governance-icon"><use href="#ic-layers"></use></svg></div><div class="ontology-detail-inner"><div class="schema-chip-title">ENTITY TYPES</div><div id="typeChips" class="type-chips"></div><div class="schema-chip-title">DIRECTED RELATIONSHIP</div><div class="schema-relation">SOURCE <svg><use href="#ic-arrow"></use></svg> <strong>FLOWS_TO</strong> <svg><use href="#ic-arrow"></use></svg> TARGET</div><div class="schema-chip-title">INTERPRETATION RULES</div><div id="ontologyRules"></div><div class="ontology-warning"><svg><use href="#ic-info"></use></svg> Synthetic topology cannot establish hydraulic availability, safety or real-world asset constraints.</div></div></section></div>
+        </section>
+
+        <section class="view hidden" id="view-activity">
+          <div class="page-intro"><div class="eyebrow"><span class="eyebrow-line"></span> TRANSPARENCY / GOVERNANCE</div><h1>Every action, <em>accounted for.</em></h1><p>Review agent activity, scenario execution and local demonstration approvals. No production environment is connected.</p></div>
+          <div class="activity-layout"><section class="panel"><div class="panel-head"><div><div class="panel-eyebrow">EVENT TRAIL</div><h2>Activity timeline</h2><p>Session-level, in-memory event log.</p></div><button id="refreshActivity" class="small-pill"><svg><use href="#ic-refresh"></use></svg> Refresh</button></div><div id="auditRows" class="audit-rows"><div class="empty-state">No activity yet.</div></div></section><section class="panel activity-right"><div class="panel-head"><div><div class="panel-eyebrow">CONTROL PLANE</div><h2>Boundaries</h2></div></div><div class="safety-list"><div><svg><use href="#ic-shield"></use></svg><strong>Synthetic-only</strong><p>All entities, jobs and scenarios come from local JSON fixtures.</p></div><div><svg><use href="#ic-lock"></use></svg><strong>Human approval gate</strong><p>Drafts are never executed; approval only updates demo-session memory.</p></div><div><svg><use href="#ic-code"></use></svg><strong>Inspectable tools</strong><p>Dependency traversal and conflict logic are tested independently.</p></div></div><button class="outline-btn reset-btn" id="resetSession"><svg><use href="#ic-refresh"></use></svg> Reset demo session</button></section></div>
+        </section>
+      </main>
+    </div>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="approvalModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-backdrop" id="modalBackdrop"></div><div class="modal-card"><span class="modal-icon"><svg><use href="#ic-shield"></use></svg></span><h2 id="modalTitle">Confirm demo approval</h2><p>This records an approval in local session memory only. No real work order is issued, no external APIs are contacted and no physical systems can be controlled.</p><label for="reviewerInput">REVIEWER NAME</label><input id="reviewerInput" placeholder="e.g. Demo reviewer" maxlength="80" /><label class="modal-check"><input id="approvalConfirm" type="checkbox" /> I understand this is a fictional demonstration.</label><div class="modal-actions"><button id="cancelApproval" class="outline-btn">Cancel</button><button id="confirmApproval" class="primary-btn">Record demo approval</button></div></div></div>
+</body>
+</html>
